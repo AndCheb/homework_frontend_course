@@ -24,10 +24,13 @@
   --clr-text-button: #fff;
   --clr-bg-primary: #eeeff1;
   --clr-bg-secondary: var(--clr-blue);
+  --clr-bg-tertiary: #f9f9f9;
   --clr-bg-hover: #00bbd3;
   --font-size-base: 16px;
   --font-size-title: 30px;
   --1150_145-320_60: clamp(3.75rem, 1.702rem + 10.24vw, 9.063rem);
+  --1150_120-320_40: clamp(2.5rem, 0.572rem + 9.64vw, 7.5rem);
+  --1150_100-320_40: clamp(2.5rem, 1.054rem + 7.23vw, 6.25rem);
   --1150_87-320_25: clamp(1.563rem, 0.069rem + 7.47vw, 5.438rem);
   --1150_60-320_40: clamp(2.5rem, 2.018rem + 2.41vw, 3.75rem);
   --1150_55-320_40: clamp(2.5rem, 2.139rem + 1.81vw, 3.438rem);
@@ -253,6 +256,24 @@ label {
   padding-bottom: var(--1150_60-320_40);
 }
 
+.about {
+  background-color: var(--clr-bg-tertiary);
+}
+
+.about__content {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  justify-items: center;
+  row-gap: 50px;
+  padding-top: var(--1150_120-320_40);
+  padding-bottom: var(--1150_100-320_40);
+}
+
+.about__text {
+  max-width: 540px;
+  text-align: center;
+}
+
 @media (max-width: 1000px) {
   .burger {
     position: fixed;
@@ -316,12 +337,22 @@ label {
 
   .description__title,
   .description__text {
-    max-width: 80%;
+    max-width: 85%;
     text-align: center;
   }
 }
 
+@media (max-width: 700px) {
+  .about__text {
+    max-width: 85%;
+  }
+}
+
 @media (max-width: 450px) {
+  .text {
+    font-size: 15px;
+  }
+
   .description__content {
     row-gap: 0;
   }
@@ -330,8 +361,8 @@ label {
     min-height: 0;
   }
 
-  .description__text {
-    font-size: 15px;
+  .about__content {
+    row-gap: 40px;
   }
 }
 
