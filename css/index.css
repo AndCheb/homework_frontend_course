@@ -16,16 +16,18 @@
 
 :root {
   --clr-primary: #000;
-  --clt-secondary: #34547a;
+  --clr-secondary: #34547a;
+  --clr-tertiary: #c4c4c4;
   --clr-menu: var(--clr-primary);
-  --clr-menu-hover: var(--clt-secondary);
+  --clr-menu-hover: var(--clr-secondary);
   --clr-title: var(--clr-primary);
   --clr-text: #727272;
   --clr-text-button: #fff;
   --clr-bg-primary: #eeeff1;
-  --clr-bg-secondary: var(--clt-secondary);
+  --clr-bg-secondary: var(--clr-secondary);
   --clr-bg-tertiary: #f9f9f9;
   --clr-bg-hover: #00bbd3;
+  --clr-gradient: linear-gradient(90deg, var(--clr-secondary) 79%, var(--clr-tertiary) 79%);
   --font-size-base: 16px;
   --font-size-title: 30px;
   --1150_145-320_60: clamp(3.75rem, 1.702rem + 10.24vw, 9.063rem);
@@ -312,9 +314,80 @@ label {
   background-size: contain;
 }
 
+.skills {
+  background-color: var(--clr-bg-tertiary);
+}
+
+.skills__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: var(--1150_100-320_40);
+}
+
+.skills__info {
+  padding-top: 100px;
+}
+
+.skills__title {
+  margin-bottom: 50px;
+  text-transform: none;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  max-width: 445px;
+}
+
+.skills__item {
+  line-height: 1;
+}
+
+.skills__item::after {
+  content: "";
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  height: 4px;
+  background: var(--clr-gradient);
+}
+
+.skills__image {
+  padding-left: 20px;
+  width: 555px;
+  min-height: 450px;
+  background-image: url("./../img/./photo/photo.webp");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: cover;
+}
+
 @media (max-width: 1150px) {
   .achievements__item {
     min-height: 75px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .skills__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 60px;
+    width: 100%;
+  }
+
+  .skills__info {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .skills__title {
+    text-align: center;
+  }
+
+  .skills__list {
+    margin-inline: auto;
   }
 }
 
@@ -389,6 +462,15 @@ label {
 @media (max-width: 700px) {
   .about__text {
     max-width: 85%;
+  }
+
+  .skills__title {
+    margin-bottom: 40px;
+  }
+
+  .skills__image {
+    width: 100%;
+    min-height: clamp(15.625rem, 5.099rem + 52.63vw, 28.125rem);
   }
 }
 
