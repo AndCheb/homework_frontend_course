@@ -15,15 +15,15 @@
 }
 
 :root {
-  --clr-black: #000;
-  --clr-blue: #34547a;
-  --clr-menu: var(--clr-black);
-  --clr-menu-hover: var(--clr-blue);
-  --clr-title: var(--clr-black);
+  --clr-primary: #000;
+  --clt-secondary: #34547a;
+  --clr-menu: var(--clr-primary);
+  --clr-menu-hover: var(--clt-secondary);
+  --clr-title: var(--clr-primary);
   --clr-text: #727272;
   --clr-text-button: #fff;
   --clr-bg-primary: #eeeff1;
-  --clr-bg-secondary: var(--clr-blue);
+  --clr-bg-secondary: var(--clt-secondary);
   --clr-bg-tertiary: #f9f9f9;
   --clr-bg-hover: #00bbd3;
   --font-size-base: 16px;
@@ -31,6 +31,8 @@
   --1150_145-320_60: clamp(3.75rem, 1.702rem + 10.24vw, 9.063rem);
   --1150_120-320_40: clamp(2.5rem, 0.572rem + 9.64vw, 7.5rem);
   --1150_100-320_40: clamp(2.5rem, 1.054rem + 7.23vw, 6.25rem);
+  --1150_87-320_55: clamp(3.438rem, 2.654rem + 3.92vw, 5.469rem);
+  --1150_87-320_40: clamp(1.563rem, 0.069rem + 7.47vw, 5.438rem);
   --1150_87-320_25: clamp(1.563rem, 0.069rem + 7.47vw, 5.438rem);
   --1150_60-320_40: clamp(2.5rem, 2.018rem + 2.41vw, 3.75rem);
   --1150_55-320_40: clamp(2.5rem, 2.139rem + 1.81vw, 3.438rem);
@@ -228,6 +230,17 @@ label {
   transition: all 0.2s ease-in-out;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .description {
   background-color: var(--clr-bg-primary);
 }
@@ -272,6 +285,37 @@ label {
 .about__text {
   max-width: 540px;
   text-align: center;
+}
+
+.achievements {
+  background-color: var(--clr-bg-secondary);
+}
+
+.achievements__content {
+  padding-top: var(--1150_87-320_55);
+  padding-bottom: var(--1150_87-320_40);
+}
+
+.achievements__list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+  overflow-x: auto;
+}
+
+.achievements__item {
+  min-width: 141px;
+  min-height: 50px;
+  background-image: url("./../img/svg/achievement.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+@media (max-width: 1150px) {
+  .achievements__item {
+    min-height: 75px;
+  }
 }
 
 @media (max-width: 1000px) {
