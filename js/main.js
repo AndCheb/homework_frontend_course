@@ -35,3 +35,11 @@ burgerOveraly.addEventListener('click', () => {
   burgerClose();
 });
 
+const video = document.querySelector('.video__display');
+const videoPlay = document.querySelector('.video__play');
+
+videoPlay.addEventListener('click', () => {
+  video.play();
+  video.setAttribute('controls', 'controls');
+  videoPlay.hidden = true;
+});

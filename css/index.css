@@ -363,6 +363,55 @@ label {
   background-size: cover;
 }
 
+.info {
+  background-color: var(--clr-bg-primary);
+}
+
+.info__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--1150_100-320_40);
+}
+
+.info__content video {
+  width: 95.5%;
+  height: auto;
+}
+
+.info__title {
+  margin-bottom: 50px;
+}
+
+.info__text {
+  max-width: 540px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.info .video {
+  position: relative;
+  width: 100%;
+}
+
+.info .video__display {
+  margin-inline: auto;
+}
+
+.info .video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-image: url("./../img/./../img/svg/play-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
 @media (max-width: 1150px) {
   .achievements__item {
     min-height: 75px;
@@ -472,6 +521,24 @@ label {
     width: 100%;
     min-height: clamp(15.625rem, 5.099rem + 52.63vw, 28.125rem);
   }
+
+  .info .video__play {
+    width: 70px;
+    height: 70px;
+  }
+
+  .info__content video {
+    width: 100%;
+  }
+
+  .info__title,
+  .info__text {
+    margin-bottom: 40px;
+  }
+
+  .info__text {
+    max-width: 85%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -503,6 +570,11 @@ label {
 
   .burger__list {
     row-gap: 50px;
+  }
+
+  .info .video__play {
+    width: 50px;
+    height: 50px;
   }
 }
 
