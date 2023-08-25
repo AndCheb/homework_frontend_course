@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page smooth-scroll" lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.min.css">
     <script src="./js/main.min.js" defer></script>
-    <title>Portfolio site</title>
+    <title>Моё портфолио</title>
   </head>
   <body class="page__body">
     <header class="header">
@@ -14,10 +14,10 @@
           <nav class="burger">
             <ul class="burger__list">
               <li class="burger__item"> <a class="burger__link" href="#!">Главная</a></li>
-              <li class="burger__item"> <a class="burger__link" href="#!">Об авторе</a></li>
-              <li class="burger__item"> <a class="burger__link" href="#!">Работы</a></li>
-              <li class="burger__item"> <a class="burger__link" href="#!">Процесс</a></li>
-              <li class="burger__item"> <a class="burger__link" href="#!">Контакты</a></li>
+              <li class="burger__item"> <a class="burger__link" href="#author">Об авторе</a></li>
+              <li class="burger__item"> <a class="burger__link" href="#works">Работы</a></li>
+              <li class="burger__item"> <a class="burger__link" href="#info">Процесс</a></li>
+              <li class="burger__item"> <a class="burger__link" href="#contacts">Контакты</a></li>
             </ul>
             <button class="burger__close" type="button" aria-label="close menu">
               <svg width="20" height="20" stroke="#000" stroke-width="3">
@@ -49,7 +49,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="author">
         <div class="wrapper">
           <div class="about__content">
             <div class="about__title title">Обо мне</div>
@@ -87,7 +87,7 @@
           </div>
         </div>
       </section>
-      <section class="info">
+      <section class="info" id="info">
         <div class="wrapper">
           <div class="info__content">
             <h2 class="info__title title">Как я работаю</h2>
@@ -105,7 +105,8 @@
       </section>
       <sectoin class="works">
         <div class="works__content">
-          <div class="works__info">
+          <h2 class="visually-hidden">Мои работы</h2>
+          <div class="works__info" id="works">
             <ul class="works__list">
               <li class="works__item"><a class="works__link" href="#!"><img src="./img/works/work1.webp" width="480" height="480" alt="portfolio work">
                   <div class="works__overlay"></div></a></li>
@@ -136,7 +137,32 @@
           </div>
         </div>
       </sectoin>
+      <section class="send" id="contacts">
+        <div class="wrapper">
+          <div class="send__content">
+            <h2 class="send__title title">Хотите веб-сайт?</h2>
+            <p class="send__text text">Lorem Ipsum — это текст-"рыба», часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века.</p>
+            <form class="send__form" action="#">
+              <input class="send__name" type="text" name="name" placeholder="Ваше имя">
+              <input class="send__email" type="email" name="email" placeholder="Ваш e-mail">
+              <textarea class="send__message" name="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+              <button class="send__button button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__content">
+          <div class="footer__info"><span>Иванов Иван</span><small class="copyright">© 2018. Все права защищены. </small></div>
+          <ul class="footer__list">
+            <li><a href="#!"> </a></li>
+            <li><a href="#!"> </a></li>
+            <li><a class="footer__link" href="#!"> </a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

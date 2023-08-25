@@ -962,6 +962,115 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
+.send {
+  background-color: var(--clr-bg-primary);
+}
+
+.send__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--1150_100-320_40);
+}
+
+.send__title {
+  margin-bottom: 50px;
+}
+
+.send__text {
+  margin-bottom: 65px;
+  max-width: 540px;
+  text-align: center;
+}
+
+.send__name {
+  grid-area: name;
+}
+
+.send__email {
+  grid-area: email;
+}
+
+.send__message {
+  grid-area: message;
+}
+
+.send__button {
+  grid-area: button;
+}
+
+.send__form {
+  display: grid;
+  grid-template-columns: repeat(2, 255px);
+  grid-template-rows: 50px 225px min-content;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  grid-template-areas: "name email" "message message" "button button";
+  max-width: 540px;
+}
+
+.send__name,
+.send__email {
+  padding: 20px;
+}
+
+.send__message {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+  font: inherit;
+  border: none;
+  resize: none;
+}
+
+.send__button {
+  justify-self: center;
+}
+
+.footer {
+  background-color: var(--clr-secondary);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.footer__info span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer__info {
+  color: #fff;
+  flex: 13;
+}
+
+.footer__list {
+  display: flex;
+  column-gap: 22px;
+}
+
+.footer__list li {
+  width: 44px;
+  height: 40px;
+}
+
+.footer__list a {
+  width: 44px;
+  height: 40px;
+  background-image: url("./../img/svg/vk.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
 @media (max-width: 1150px) {
   .achievements__item {
     min-height: 75px;
@@ -1094,6 +1203,28 @@ button.swiper-pagination-bullet {
   .info__text {
     max-width: 85%;
   }
+
+  .send__text {
+    max-width: 85%;
+  }
+
+  .send__form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 255px min-content;
+    grid-template-areas: "name" "email" "message" "button";
+    min-width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer__content {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+  }
+
+  .footer__content span {
+    text-align: center;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1131,6 +1262,21 @@ button.swiper-pagination-bullet {
     width: 50px;
     height: 50px;
   }
+
+  .send__text,
+  .send__title {
+    margin-bottom: 40px;
+  }
+
+  .send__form {
+    min-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page.smooth-scroll {
+    scroll-behavior: smooth;
+  }
 }
 
 @media (any-hover: hover) {
@@ -1144,5 +1290,9 @@ button.swiper-pagination-bullet {
 
   .works__overlay:hover {
     opacity: 1;
+  }
+
+  .footer__list a:hover {
+    transform: translateY(-3px);
   }
 }
