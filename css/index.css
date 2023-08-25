@@ -228,6 +228,7 @@ label {
   padding-inline: 2.56em;
   letter-spacing: 1.6px;
   text-transform: uppercase;
+  text-align: center;
   color: var(--clr-text-button);
   background-color: var(--clr-bg-secondary);
   transition: all 0.2s ease-in-out;
