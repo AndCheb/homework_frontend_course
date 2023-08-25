@@ -1233,6 +1233,10 @@ button.swiper-pagination-bullet {
     font-size: 15px;
   }
 
+  .button {
+    font-size: 14px;
+  }
+
   .description__content {
     row-gap: 0;
   }
